@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "3e1ae3cc-290b-4f88-a776-3620c9711caf",
+		"name": "todo list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49323914",
+		"_collection_link": "https://srujanms1802-5203324.postman.co/workspace/Srujan-M-S's-Workspace~0dc67352-8208-4583-8327-4a42687456dc/collection/49323914-3e1ae3cc-290b-4f88-a776-3620c9711caf?action=share&source=collection_link&creator=49323914"
+	},
+	"item": [
+		{
+			"name": "Register a User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"user1\",\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"mypassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register a User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\":\"user11\",\r\n  \"email\": \"testuser1@example.com\",\r\n  \"password\": \"mypassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "296"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"128-+8hJ7ceUwnQ5xCZzF+EH2Hq9U2Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:05:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"username\": \"user11\",\n        \"email\": \"testuser1@example.com\",\n        \"password\": \"$2b$10$gdKj9TzLFZxSPxow6bRGc.igXed9vT5pMLfhdiZZqW7C1H1FUZ.EG\",\n        \"_id\": \"68f109c0703cba0ad76abf16\",\n        \"createdAt\": \"2025-10-16T15:05:36.278Z\",\n        \"updatedAt\": \"2025-10-16T15:05:36.278Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"mypassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b7-sljndg2zdJU/vNypIhH3mtVvz8s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:05:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjBmZDQ5NTI4ZGE0OWQ5MTM4ODA1NyIsImlhdCI6MTc2MDYyNzE0MiwiZXhwIjoxNzYwNzEzNTQyfQ.d5yBFhUNFFTVMK5Z5nSGOs1rU3bE70mIdPZoM1jbZBc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create a Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Buy groceries\",\r\n  \"description\": \"Milk, Eggs, Bread\",\r\n  \"dueDate\": \"2025-10-18\",\r\n  \"category\": \"Shopping\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create a Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Buy groceries\",\r\n  \"description\": \"Milk, Eggs, Bread\",\r\n  \"dueDate\": \"2025-10-18\",\r\n  \"category\": \"Shopping\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"122-MjHOGIzzTiXHz1WoxfhvBcvBhvI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:08:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": \"68f0fd49528da49d91388057\",\n    \"title\": \"Buy groceries\",\n    \"description\": \"Milk, Eggs, Bread\",\n    \"category\": \"Shopping\",\n    \"status\": \"pending\",\n    \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n    \"_id\": \"68f10a7f703cba0ad76abf29\",\n    \"createdAt\": \"2025-10-16T15:08:47.742Z\",\n    \"updatedAt\": \"2025-10-16T15:08:47.742Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Get All Tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "903"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"387-jVpfh7Ei1tZdQ4LF1YlkCxbDAjI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:08:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 3,\n    \"page\": 1,\n    \"tasks\": [\n        {\n            \"_id\": \"68f109cb703cba0ad76abf19\",\n            \"user\": \"68f0fd49528da49d91388057\",\n            \"title\": \"Buy groceries\",\n            \"description\": \"Milk, Eggs, Bread\",\n            \"category\": \"Shopping\",\n            \"status\": \"pending\",\n            \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n            \"createdAt\": \"2025-10-16T15:05:47.254Z\",\n            \"updatedAt\": \"2025-10-16T15:05:47.254Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68f10a40703cba0ad76abf23\",\n            \"user\": \"68f0fd49528da49d91388057\",\n            \"title\": \"Buy groceries\",\n            \"description\": \"Milk, Eggs, Bread\",\n            \"category\": \"Shopping\",\n            \"status\": \"pending\",\n            \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n            \"createdAt\": \"2025-10-16T15:07:44.365Z\",\n            \"updatedAt\": \"2025-10-16T15:07:44.365Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68f10a4f703cba0ad76abf25\",\n            \"user\": \"68f0fd49528da49d91388057\",\n            \"title\": \"Buy groceries\",\n            \"description\": \"Milk, Eggs, Bread\",\n            \"category\": \"Shopping\",\n            \"status\": \"pending\",\n            \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n            \"createdAt\": \"2025-10-16T15:07:59.437Z\",\n            \"updatedAt\": \"2025-10-16T15:07:59.437Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "View One Task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "View One Task",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks/68f10a7f703cba0ad76abf29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"68f10a7f703cba0ad76abf29"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"122-tKS/NbleP5L92q8kjImc1XabCSE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:09:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"68f10a7f703cba0ad76abf29\",\n    \"user\": \"68f0fd49528da49d91388057\",\n    \"title\": \"Buy groceries\",\n    \"description\": \"Milk, Eggs, Bread\",\n    \"category\": \"Shopping\",\n    \"status\": \"pending\",\n    \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n    \"createdAt\": \"2025-10-16T15:08:47.742Z\",\n    \"updatedAt\": \"2025-10-16T15:08:47.742Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Update Task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Buy groceries and snacks\",\r\n  \"status\": \"pending\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/tasks/68f10a7f703cba0ad76abf29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"68f10a7f703cba0ad76abf29"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "301"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12d-jKjPm8hh5HiLo5eK+ldUmlM+ILM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:09:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"68f10a7f703cba0ad76abf29\",\n    \"user\": \"68f0fd49528da49d91388057\",\n    \"title\": \"Buy groceries and snacks\",\n    \"description\": \"Milk, Eggs, Bread\",\n    \"category\": \"Shopping\",\n    \"status\": \"pending\",\n    \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n    \"createdAt\": \"2025-10-16T15:08:47.742Z\",\n    \"updatedAt\": \"2025-10-16T15:09:37.645Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Mark as Completed",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Mark as Completed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks/68f10a7f703cba0ad76abf29/markCompleted",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"68f10a7f703cba0ad76abf29",
+								"markCompleted"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12f-lKW8Q9enMJHCEL4pYbTogvePOz4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:09:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"68f10a7f703cba0ad76abf29\",\n    \"user\": \"68f0fd49528da49d91388057\",\n    \"title\": \"Buy groceries and snacks\",\n    \"description\": \"Milk, Eggs, Bread\",\n    \"category\": \"Shopping\",\n    \"status\": \"completed\",\n    \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n    \"createdAt\": \"2025-10-16T15:08:47.742Z\",\n    \"updatedAt\": \"2025-10-16T15:09:46.579Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Mark as Pending",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Mark as Pending",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks/68f10a7f703cba0ad76abf29/markPending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"68f10a7f703cba0ad76abf29",
+								"markPending"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "301"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12d-d4aiBXXJvnIIbwJs/1xjJw0Oq54\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:09:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"68f10a7f703cba0ad76abf29\",\n    \"user\": \"68f0fd49528da49d91388057\",\n    \"title\": \"Buy groceries and snacks\",\n    \"description\": \"Milk, Eggs, Bread\",\n    \"category\": \"Shopping\",\n    \"status\": \"pending\",\n    \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n    \"createdAt\": \"2025-10-16T15:08:47.742Z\",\n    \"updatedAt\": \"2025-10-16T15:09:59.425Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Tasks by category",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Get Tasks by category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks/category/Shopping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"category",
+								"Shopping"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1176"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"498-MZOpyxRsWaHRwGbHMfPOK+w3EhI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:10:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"68f109cb703cba0ad76abf19\",\n        \"user\": \"68f0fd49528da49d91388057\",\n        \"title\": \"Buy groceries\",\n        \"description\": \"Milk, Eggs, Bread\",\n        \"category\": \"Shopping\",\n        \"status\": \"pending\",\n        \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n        \"createdAt\": \"2025-10-16T15:05:47.254Z\",\n        \"updatedAt\": \"2025-10-16T15:05:47.254Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f10a40703cba0ad76abf23\",\n        \"user\": \"68f0fd49528da49d91388057\",\n        \"title\": \"Buy groceries\",\n        \"description\": \"Milk, Eggs, Bread\",\n        \"category\": \"Shopping\",\n        \"status\": \"pending\",\n        \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n        \"createdAt\": \"2025-10-16T15:07:44.365Z\",\n        \"updatedAt\": \"2025-10-16T15:07:44.365Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f10a4f703cba0ad76abf25\",\n        \"user\": \"68f0fd49528da49d91388057\",\n        \"title\": \"Buy groceries\",\n        \"description\": \"Milk, Eggs, Bread\",\n        \"category\": \"Shopping\",\n        \"status\": \"pending\",\n        \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n        \"createdAt\": \"2025-10-16T15:07:59.437Z\",\n        \"updatedAt\": \"2025-10-16T15:07:59.437Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f10a7f703cba0ad76abf29\",\n        \"user\": \"68f0fd49528da49d91388057\",\n        \"title\": \"Buy groceries and snacks\",\n        \"description\": \"Milk, Eggs, Bread\",\n        \"category\": \"Shopping\",\n        \"status\": \"pending\",\n        \"dueDate\": \"2025-10-18T00:00:00.000Z\",\n        \"createdAt\": \"2025-10-16T15:08:47.742Z\",\n        \"updatedAt\": \"2025-10-16T15:09:59.425Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search Tasks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Delete Task",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks/68f10a7f703cba0ad76abf29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"68f10a7f703cba0ad76abf29"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-urf4l4W7aUjEqcMghGgrIBDtf0M\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 15:10:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task deleted successfully\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjBmZDQ5NTI4ZGE0OWQ5MTM4ODA1NyIsImlhdCI6MTc2MDYyNzE0MiwiZXhwIjoxNzYwNzEzNTQyfQ.d5yBFhUNFFTVMK5Z5nSGOs1rU3bE70mIdPZoM1jbZBc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
